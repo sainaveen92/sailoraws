@@ -18,7 +18,7 @@
         owner: vagrant
         group: vagrant
     - name: install tomcat
-      get_curl:
+      get_url:
         url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.64/bin/apache-tomcat-9.0.64.tar.gz
         dest: /u01/middleware
     - name: unzip tomcat
