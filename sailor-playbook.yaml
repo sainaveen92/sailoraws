@@ -7,9 +7,10 @@
       apt:
         name: "openjdk-11-jdk"
         state: present
+        update_cache: yes
       become: yes
       become_method: sudo
-      update_cache: yes
+      
     - name: create_dirs
       file:
         path: /u01/middleware
