@@ -25,9 +25,11 @@ pipeline {
         }
         stage('setup environment') {
             steps {
-                terraform init
-                terraform apply --auto-approve
-                terraform output "public_ip" > hosts
+                sh '''
+                    terraform init
+                    terraform apply --auto-approve
+                    terraform output "public_ip" > hosts
+                '''
             }
         }
         stage('deploy') {
