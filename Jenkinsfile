@@ -1,10 +1,10 @@
 pipeline {
     agent any
     tools {
-        maven = "maven"
-        jdk = "jdk11"
-        ansible = "ansible"
-        terraform = "terraform"
+        maven "maven"
+        jdk "jdk11"
+        ansible "ansible"
+        terraform "terraform"
     }
     environment {
         AWS_ACCESS_KEY_ID = credentials('AWS_ACCESS_KEY')
