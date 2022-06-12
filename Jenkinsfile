@@ -29,7 +29,6 @@ pipeline {
                     terraform init
                     terraform apply --auto-approve
                     terraform output "public_ip" > hosts
-                    echo "ansible_ssh_common_args='-o StrictHostKeyChecking=no'" >> hosts
                 '''
             }
         }
