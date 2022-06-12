@@ -15,8 +15,8 @@
       file:
         path: /u01/middleware
         state: directory
-        owner: vagrant
-        group: vagrant
+        owner: ubuntu
+        group: ubuntu
       become: yes
       become_method: sudo  
     - name: install tomcat
