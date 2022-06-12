@@ -13,7 +13,7 @@ resource "aws_instance" "sailorec2instance" {
   ami = "ami-068257025f72f470d"
   key_name = aws_key_pair.sailorkeypair.key_name
   associate_public_ip_address = true
-  vpc_security_group_ids = aws_security_group.sailorsg
+  vpc_security_group_ids = [aws_security_group.sailorsg.id]
 }
 resource "aws_key_pair" "sailorkeypair" {
   key_name = "sailorkey"
