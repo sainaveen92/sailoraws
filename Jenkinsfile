@@ -27,7 +27,7 @@ pipeline {
             steps {
                 terraform init
                 terraform apply --auto-approve
-                terraform output public_ip > hosts
+                terraform output "public_ip" > hosts
             }
         }
         stage('deploy') {
