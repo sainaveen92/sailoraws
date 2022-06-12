@@ -3,7 +3,7 @@ pipeline {
     tools {
         maven "maven"
         jdk "jdk11"
-        ansible "ansible"
+        Ansible "ansible"
         terraform "terraform"
     }
     environment {
